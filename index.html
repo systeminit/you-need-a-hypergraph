@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div>
+					The future is a hypergraph
+				</div>
+				<div>
+					<small>Adam Jacob, CEO, System Initiative</small>
+				</div>
+				<div>
+					<small>adam@systeminit.com; @adamhjk.me on bsky</small>
+				</div>
+			</section>
+			<section>
+				<div class="r-fit-text">Programming as</div>
+				<div class="r-fit-text">Theory Building</div>
+				<div class="small">Peter Naur</div>
+				<aside class="notes">
+					<ui>
+						<li>work is not coding</li>
+						<li>its the creation of a theory of how the program works</li>
+						<li>the quality of your work ties to the completness of your theory</li>
+					</ui>
+				</aside>
+			</section>
+			<section>
+				<div class="r-fit-text">
+					<div>
+						Theory of automation
+					</div>
+				</div>
+				<div>
+					<small>
+						Infrastructure as Code
+					</small>
+				</div>
+				<div>
+					<small>
+						<strong>Infrastructure as Model</strong>
+					</small>
+				</div>
+
+				<aside class="notes">
+					<ui>
+						<li>that's what this is about</li>
+						<li>we've been working under the same theory for the last 30 years</li>
+						<li>Broadly IaC</li>
+						<li>We're going to talk about Infrastructure as Model</li>
+						<li>Specifically, the implementation of it in System Initiative</li>
+					</ui>
+				</aside>
+			</section>
+			<section>
+				<div>
+					Infrastructure as Code
+				</div>
+				<div class="mermaid">
+					<pre>
+						%%{init: { 'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+						flowchart TD
+						Code@{shape: doc, label: "Source Code" }
+						ResourceDeclaration@{shape: card, label: "Resource Declaration" }
+						ResourceState@{shape: das, label: "Resource State"}
+						Outside@{shape: procs, label: "Outside World"}
+						Code -->|Has Many| ResourceDeclaration
+						ResourceDeclaration -->|Compared to| ResourceState
+						ResourceState -->|Calculates Mutation Of| Outside
+					</pre>
+				</div>
+				<aside class="notes">
+					<ui>
+						<li>This is how its worked since 1993</li>
+					</ui>
+				</aside>
+			</section>
+			<section>
+				<div class="r-fit-text">
+					Hypergraph of Functions
+				</div>
+				<aside class="notes">
+					<ui>
+						<li>Specifically a hypergraph of functions</li>
+					</ui>
+				</aside>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid]
+		});
+	</script>
+</body>
+
+</html>
