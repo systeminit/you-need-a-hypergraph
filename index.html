@@ -1,3 +1,4 @@
+<!-- vim: set tabstop=2 -->
 <!doctype html>
 <html lang="en">
 
@@ -5,101 +6,330 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>A new theory of Automation</title>
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/black.css">
+	<link rel="stylesheet" href="dist/theme/si.css">
 
 	<!-- Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="plugin/highlight/gruvbox-dark-hard.css">
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<div>
-					The future is a hypergraph
-				</div>
-				<div>
+				<div class="r-vstack">
+					<div class="r-fit-text">
+						A new theory of Automation
+					</div>
+					<object data="./assets/si-logo-symbol-padded.svg" width="300" style="color:white"></object>
 					<small>Adam Jacob, CEO, System Initiative</small>
-				</div>
-				<div>
 					<small>adam@systeminit.com; @adamhjk.me on bsky</small>
 				</div>
 			</section>
 			<section>
-				<div class="r-fit-text">Programming as</div>
-				<div class="r-fit-text">Theory Building</div>
-				<div class="small">Peter Naur</div>
-				<aside class="notes">
-					<ui>
-						<li>work is not coding</li>
-						<li>its the creation of a theory of how the program works</li>
-						<li>the quality of your work ties to the completness of your theory</li>
-					</ui>
-				</aside>
-			</section>
-			<section>
-				<div class="r-fit-text">
-					<div>
-						Theory of automation
+				<div class="r-vstack">
+					<div class="r-fit-text orange">
+						Infrastructure as Model
+					</div>
+					<div class="r-fit-text blue">
+						Hypergraph of Functions
 					</div>
 				</div>
-				<div>
-					<small>
-						Infrastructure as Code
-					</small>
-				</div>
-				<div>
-					<small>
-						<strong>Infrastructure as Model</strong>
-					</small>
-				</div>
+			</section>
 
-				<aside class="notes">
-					<ui>
-						<li>that's what this is about</li>
-						<li>we've been working under the same theory for the last 30 years</li>
-						<li>Broadly IaC</li>
-						<li>We're going to talk about Infrastructure as Model</li>
-						<li>Specifically, the implementation of it in System Initiative</li>
-					</ui>
-				</aside>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text">Programming as</div>
+					<div class="r-fit-text">Theory Building</div>
+					<small>Peter Naur, 1985</small>
+				</div>
 			</section>
 			<section>
-				<div>
-					Infrastructure as Code
+				<div class="r-fit-text">Definition of Programming is</div>
+				<div class="r-fit-text">Expansive</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text">Theory</div>
+					<div><span class="orange">Intelligent</span> behavior</div>
+					<div><span class="green">Intellectual</span> behavior</div>
+					<small>Gilbert Ryle, The Concept of Mind, 1949</small>
 				</div>
-				<div class="mermaid">
+			</section>
+			<section>
+				<div class="r-vstack">
+					<h2>Theory in Programming</h2>
+					<ol>
+						<li>Can explain how the <span class="orange">solution</span> relates to the outside <span
+								class="orange">world</span></li>
+						<li>Why each part of the <span class="green">program</span> is how it is</li>
+						<li>Can respond constructively to demands for <span class="blue">modification</span></li>
+					</ol>
+				</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<h2>Two theories at once</h2>
+					<ol>
+						<li>How the infrastructure supports the <span class="orange">application</span></li>
+						<li>How the <span class="green">automation</span> builds and maintains it</li>
+					</ol>
+				</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text"><span class="orange">Model</span></div>
+					<div><small>More than just a data model</small></div>
+					<div>A high fidelity virtual representation of a real world thing</div>
+				</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text blue">Domain</div>
+					<div>The Model reflects the truth of the Domain</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="r-fit-text">Formula One</div>
+			</section>
+			<section>
+				<div class="r-fit-text">Unity</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text">Technology Automation</div>
+					<div>Infrastructure as Model</div>
+					<table>
+						<tr>
+							<th class="orange">Properties</th>
+							<td>ex: config, settings, metadata</td>
+						</tr>
+						<tr>
+							<th class="green">Actions</th>
+							<td>ex: create, update, start, stop</td>
+						</tr>
+						<tr>
+							<th class="blue">Relationships</th>
+							<td>ex: this belongs to that, etc.</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div>
+						<h2>AWS::EC2::VPC</h2>
+					</div>
+					<table>
+						<tr>
+							<th class="orange">
+								Properties
+							</th>
+							<th class="green">
+								Actions
+							</th>
+							<th class="blue">
+								Relationships
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<small>
+									<ul>
+										<li>CidrBlock: String</li>
+										<li>Tags: [ Tag, ... ]</li>
+									</ul>
+								</small>
+							</td>
+							<td>
+								<small>
+									<ul>
+										<li>Create</li>
+										<li>Update</li>
+									</ul>
+								</small>
+							</td>
+							<td>
+								<small>
+									<ul>
+										<li>Is in: Region</li>
+										<li>Has Many: Subnets</li>
+									</ul>
+								</small>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text">Digital Twin</div>
+					<div class="mermaid">
+						<pre>
+							%%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+							flowchart TD
+							Model
+							Component
+							Resource
+							Model <--> Component
+								Model <--> Resource
+						</pre>
+					</div>
+					<div>
+						Is <span class="orange">bi-directional</span> by nature
+					</div>
+				</div>
+			</section>
+			<section>
+				<div style="text-decoration: line-through;">Static Models</div>
+				<div class="r-fit-text">Programmable Models</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text">Reactive Functions</div>
 					<pre>
-						%%{init: { 'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
-						flowchart TD
-						Code@{shape: doc, label: "Source Code" }
-						ResourceDeclaration@{shape: card, label: "Resource Declaration" }
-						ResourceState@{shape: das, label: "Resource State"}
-						Outside@{shape: procs, label: "Outside World"}
-						Code -->|Has Many| ResourceDeclaration
-						ResourceDeclaration -->|Compared to| ResourceState
-						ResourceState -->|Calculates Mutation Of| Outside
+						<code class="language-typescript" data-trim data-noescape data-line-numbers>
+							const count = ref(0)
+							const sayCount = computed(() => {
+							  return `I am sir counts a lot: ${count.value}`
+							})
+							const incrementCount = () => {
+							  count.value++
+							}
+							# sayCount is 0
+							incrementCount()
+							# sayCount is 1, it reacted to count changing
+						</code>
+					</pre>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text">Graph of Reactive Functions</div>
+					<div class="mermaid" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+						<pre>
+							%%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+							graph LR;
+								  A(2)
+									B(4)
+									C(8)
+									D(16)
+									E(16)
+									M(32)
+									S(SUM)
+
+									A -- double(2) --> B
+									B -- double(4) --> C
+									C -- double(8) --> D
+									C -- double(8) --> E 
+									E --> S
+									D --> S
+									S --> M
+						</pre>
+					</div>
+						Arguments change, functions run
+				</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<h1>Properties</h1>
+					<span class="blue">Are simple value computation</span>
+					<pre>
+						<code class="language-typescript" data-trim data-line-numbers>
+						function main(properties: Input): Output {
+							return properties.resource?.payload?.VpcId;
+						}
+						</code>
 					</pre>
 				</div>
-				<aside class="notes">
-					<ui>
-						<li>This is how its worked since 1993</li>
-					</ui>
-				</aside>
 			</section>
 			<section>
-				<div class="r-fit-text">
-					Hypergraph of Functions
+				<div class="r-vstack">
+					<h1>Actions</h1>
+					<span class="blue">Are side effects!</span>
+					<pre>
+						<code class="language-typescript" data-trim data-line-numbers>
+						function main(component: Input): Output {
+							const child = await siExec.waitUntilEnd("aws", [
+									"ec2",
+									"run-instances",
+									"--region",
+									component.properties.domain?.region || "",
+									"--cli-input-json",
+									code || "",
+							]);
+						}
+						</code>
+					</pre>
 				</div>
-				<aside class="notes">
-					<ui>
-						<li>Specifically a hypergraph of functions</li>
-					</ui>
-				</aside>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<h1>Relationships</h1>
+					<span class="blue">Argument passing and transformation</span>
+					<div class="mermaid" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+						<pre>
+							%%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+							graph LR;
+									A@{ shape: rect, label: "Property f(input): a" }
+									B@{ shape: rect, label: "Output f(a): b" }
+									C@{ shape: rect, label: "Input f(b): c" }
+									D@{ shape: rect, label: "Property f(c): c" }
+
+									A --> B 
+									B --> C
+									C --> D
+						</pre>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text">Hypergraph of Functions</div>
+					<div>
+						Brings <span class="orange">change isolation</span> and <span class="green">replay</span>
+					</div>
+					<div>
+						<small>
+						<ul>
+							<li>Create a change set</li>
+							<li>Track changes</li>
+							<li>Apply to another change set: compute operational transform</li>
+							<li>Replay OT to open changes</li>
+						</ul>
+						</small>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div>DEMO: VPC->Subnet</div>
+					<div>Change set</div>
+					<div>Keeb does credentials and region</div>
+					<div>Multiplayer</div>
+					<div>Credentials f(plaintext): cypher</div>
+				</div>
+			</section>
+			<section>
+				<div class="r-vstack">
+					<div class="r-fit-text">Hypergraph of Functions</div>
+					<div>
+						Brings <span class="orange">change isolation</span> and <span class="green">replay</span>
+					</div>
+					<div>
+						<small>
+						<ul>
+							<li>Create a change set</li>
+							<li>Track changes</li>
+							<li>Apply to another change set: compute operational transform</li>
+							<li>Replay OT to open changes</li>
+						</ul>
+						</small>
+					</div>
+				</div>
 			</section>
 
 		</div>
@@ -116,7 +346,9 @@
 		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
-
+			slideNumber: true,
+			progress: true,
+			transition: "none",
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid]
 		});
